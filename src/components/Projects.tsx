@@ -10,21 +10,24 @@ const projects = [
     category: 'Map-First Discovery & AI',
     description: 'A full-scale startup-grade platform connecting local businesses with customers. Features advanced map-based discovery, AI-driven recommendations, and a robust verification system.',
     tags: ['Next.js', 'Python', 'AI/RAG', 'PostgreSQL', 'Google Maps API'],
-    image: '/images/localink-project.png'
+    image: '/images/localink-project.png',
+    link: 'https://github.com/Sankeerth2005'
   },
   {
     title: 'DukaanLedger',
     category: 'SaaS & Fintech',
     description: 'A multi-tenant SaaS application for small business owners to manage inventory, sales, and analytics. Implements strict data isolation and real-time business insights.',
     tags: ['React', 'Java Spring Boot', 'AWS', 'Docker', 'SQL Server'],
-    image: '/images/web-project.png'
+    image: '/images/web-project.png',
+    link: 'https://github.com/Sankeerth2005'
   },
   {
     title: 'AI Text Rewriter',
     category: 'AI & Automation',
     description: 'An intelligent writing assistant that leverages Large Language Models to transform text styles, fix grammar, and optimize content for better engagement.',
     tags: ['Python', 'OpenAI API', 'Next.js', 'LangChain', 'FastAPI'],
-    image: '/images/ai-project.png'
+    image: '/images/ai-project.png',
+    link: 'https://github.com/Sankeerth2005'
   }
 ];
 
@@ -38,8 +41,11 @@ const Projects = () => {
 
       <div className={styles.grid}>
         {projects.map((project, i) => (
-          <motion.div 
+          <motion.a 
             key={i} 
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
             className={styles.card}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -64,7 +70,7 @@ const Projects = () => {
             <div className={styles.linkIcon}>
               <ArrowUpRight size={24} />
             </div>
-          </motion.div>
+          </motion.a>
         ))}
       </div>
     </section>

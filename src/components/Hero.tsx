@@ -7,7 +7,6 @@ import styles from './Hero.module.css';
 const stats = [
   { value: '30+', label: 'Completed Projects' },
   { value: '1+', label: 'Years of Experience' },
-  { value: '10+', label: 'Happy Clients' },
   { value: '5+', label: 'Certifications' },
 ];
 

@@ -5,19 +5,19 @@
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 60px;
+  gap: 48px;
 }
 
 .card {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 40px;
+  display: flex;
+  flex-direction: column;
   background: var(--bg-card);
   border-radius: var(--r-xl);
   border: 1px solid var(--border-card);
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
+  text-decoration: none;
 }
 
 .card:hover {
@@ -28,10 +28,10 @@
 
 .imageContainer {
   width: 100%;
-  aspect-ratio: 16/10;
+  aspect-ratio: 16/9;
   overflow: hidden;
   background: #111;
-  border-right: 1px solid var(--border-card);
+  border-bottom: 1px solid var(--border-card);
 }
 
 .image {
@@ -46,22 +46,21 @@
 }
 
 .info {
-  padding: 48px;
+  padding: 40px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 24px;
+  gap: 20px;
 }
 
 .title {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 800;
   color: var(--text-primary);
   margin: 0;
 }
 
 .meta {
-  font-size: 14px;
+  font-size: 13px;
   color: var(--accent);
   font-weight: 700;
   text-transform: uppercase;
@@ -69,7 +68,7 @@
 }
 
 .description {
-  font-size: 17px;
+  font-size: 16px;
   color: var(--text-secondary);
   line-height: 1.7;
   margin: 0;
@@ -94,18 +93,20 @@
 
 .linkIcon {
   position: absolute;
-  top: 32px;
-  right: 32px;
+  top: 24px;
+  right: 24px;
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: #111;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
   border: 1px solid var(--border-card);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-secondary);
+  color: #fff;
   transition: all 0.3s;
+  z-index: 10;
 }
 
 .card:hover .linkIcon {
@@ -115,15 +116,11 @@
   transform: rotate(45deg);
 }
 
-@media (max-width: 1100px) {
-  .card {
-    grid-template-columns: 1fr;
-  }
-  .imageContainer {
-    border-right: none;
-    border-bottom: 1px solid var(--border-card);
-  }
+@media (max-width: 640px) {
   .info {
-    padding: 32px;
+    padding: 24px;
+  }
+  .title {
+    font-size: 24px;
   }
 }

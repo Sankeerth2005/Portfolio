@@ -8,7 +8,7 @@ const experiences = [
   {
     company: 'Mphasis',
     role: 'Associate Software Engineer Intern',
-    period: 'Jan 2026 - Apr 2026',
+    period: 'Jan 2026 - Apr 2026  ',
     description: 'Spearheading the development of high-performance backend microservices using Java Spring Boot. Focused on optimizing database queries and implementing secure REST APIs for large-scale enterprise solutions.',
     highlights: [
       'Improved API response times by 30% through query optimization',
@@ -21,7 +21,7 @@ const experiences = [
   {
     company: 'Mroads',
     role: 'DevOps Intern',
-    period: 'Jun 2025 - Dec 2025',
+    period: 'Oct 2025 - Jan 2026',
     description: 'Designed and implemented automated CI/CD pipelines to streamline deployment workflows. Managed cloud-based Linux environments and focused on infrastructure-as-code practices.',
     highlights: [
       'Automated deployment cycles using GitHub Actions and Docker',
@@ -35,7 +35,7 @@ const experiences = [
 
 const education = [
   {
-    school: 'Chaitanya Bharathi Institute of Technology',
+    school: 'Sreyas Institute of Engineering and Technology',
     degree: 'B.E. in Artificial Intelligence & Data Science',
     period: '2022 - 2026',
     description: 'Specializing in advanced AI architectures, machine learning algorithms, and large-scale data engineering projects. Consistently maintaining high academic performance.',
